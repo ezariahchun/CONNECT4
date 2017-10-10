@@ -1,4 +1,97 @@
-h1 {
+body {
+    background:#FFF4EC;
+  }
+  
+  h1 {
+    text-align:center;
+    margin-bottom:5px;
+    color: #C98686;
+    font-weight: bold;
+    font-size: 50px;
+  }
+  
+  p.info {
+    text-align:center;
+    width:400px;
+    margin:0 auto;
+    font-size: 16px;
+    font-weight:bold;
+    color:#F2B880;
+    margin-bottom:20px;
+    font-weight: bold;
+  }
+  
+  #game-base {
+    width: 900px;  
+    margin: auto;
+    padding-top: 50px;
+    justify-content: center;
+  }
+
+  /* button {
+    align-items: flex-start;
     text-align: center;
-    color: magenta;
-}
+    cursor: default;
+    color: red;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 5px 5px 5px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+  } */
+
+  button {
+    background: #F2B880;
+    background-image: -webkit-linear-gradient(top, #F2B880, #C98686);
+    background-image: -moz-linear-gradient(top, #F2B880, #C98686);
+    background-image: -o-linear-gradient(top, #F2B880, #C98686);
+    background-image: linear-gradient(top, bottom, #F2B880, #C98686);
+    border-radius: 50%;
+    border: 0;
+    text-shadow: 3px #f2c15e;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 32px;
+    padding: 10px 21px; 
+    text-decoration: none;
+    text-align: center;
+    background-size: center;
+  }
+  
+  /* #game-table {
+    width: 700px;
+    height: 600px;
+    margin:0 auto;
+    position:relative;
+    border: 2px solid #E7CFBC;
+    border-collapse: collapse;
+  } */
+  
+  .disc {
+    position: absolute;
+    z-index: -1;
+    top: -55px;
+    left: 14px;
+    width: 46px;
+    height: 46px;
+    border-radius: 46px;
+    transition: all .3s;
+  }
+  
+  .disc.red {
+    background:#d96666;
+  }
+  
+  .disc.yellow {
+    background:#ffeb79;
+  }
+
+  td {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 0;
+      padding: 21px;
+  }
