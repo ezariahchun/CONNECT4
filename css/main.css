@@ -1,5 +1,6 @@
 body {
     background:#FFF4EC;
+    margin: 0 auto;
   }
   
   h1 {
@@ -22,8 +23,8 @@ body {
   }
   
   #game-base {
-    width: 900px;  
-    margin: auto;
+    width: 660px;  
+    margin: 0 auto;
     padding-top: 50px;
     justify-content: center;
   }
@@ -58,6 +59,7 @@ body {
     text-decoration: none;
     text-align: center;
     background-size: center;
+    margin: 16px;
   }
   
   /* #game-table {

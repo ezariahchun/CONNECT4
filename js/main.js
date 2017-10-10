@@ -1,10 +1,10 @@
 /*-- state variables --*/
 var gameField;
-var currentPlayer;
+var currentPlayer = 1;
 var winner;
 
 /*-- cached DOM elements --*/
-var cells = document.querySelectorAll("td");
+var cells = $("td");
 
 function newgame(){
   gameField = [
@@ -37,27 +37,29 @@ function getRow(idx) {
 
 function render() {
   var colors = {
-    '0': 'white',
-    '1': 'red',
-    '-1': 'yellow'
+    '0': '#FBFEFB',
+    '1': '#F87060',
+    '-1': '#B3A394'
   };
   // job of render is to transfer state vars to the dom
-  cells.forEach(function(cell) {
+  cells.each(function(index, cell) {
     var colIdx = cell.getAttribute('col');
     var rowIdx = cell.getAttribute('row');
-    cell.style.backgroundColor = colors[gameField[colIdx][rowIdx]];
+    console.log(gameField[colIdx][rowIdx]);
+    $(cell).css('background-color', colors[gameField[colIdx][rowIdx]].toString());
   });
-  $('button').on('click',function() {
-    var colIdx = parseInt(allbuttons.id);
-    var rowIdx = gameField[colIdx].indexOf('0');
-    if(rowIdx === -1) return;
-    gameField[colIdx][rowIdx] = currentPlayer;
-    currentPlayer += -1;
-});
 }
+
+$('button').on('click',function() {
+  var colIdx = parseInt(this.id);
+  var rowIdx = gameField[colIdx].indexOf(0);
+  if(rowIdx === -1) return;
+  gameField[colIdx][rowIdx] = currentPlayer;
+  currentPlayer *= -1;
+  render();
+})
+
 
 
 newgame();
 render();
-currentPlayer = 1
-currentPlayer += -1
