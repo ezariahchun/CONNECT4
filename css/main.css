@@ -1,54 +1,43 @@
 body {
-    background:#FFF4EC;
+    font-family: 'Quicksand', sans-serif;
+    background-image: url("file:///Users/ezariahchun/connect4/scott-webb-146106.jpg");
+    background-size: 100%;
+    background-position: center;
     margin: 0 auto;
   }
   
-  h1 {
+h1 {
     text-align:center;
     margin-bottom:5px;
-    color: #C98686;
+    color: #FCEC52;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 75px;
   }
   
-  p.info {
+p.info {
     text-align:center;
     width:400px;
     margin:0 auto;
     font-size: 16px;
     font-weight:bold;
-    color:#F2B880;
-    margin-bottom:20px;
+    color:#FA9F42;
+    margin-bottom:0px;
     font-weight: bold;
   }
   
-  #game-base {
+#game-base {
     width: 660px;  
     margin: 0 auto;
     padding-top: 50px;
     justify-content: center;
   }
-
-  /* button {
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    color: red;
-    background-color: buttonface;
-    box-sizing: border-box;
-    padding: 5px 5px 5px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonface;
-    border-image: initial;
-  } */
-
-  button {
-    background: #F2B880;
-    background-image: -webkit-linear-gradient(top, #F2B880, #C98686);
-    background-image: -moz-linear-gradient(top, #F2B880, #C98686);
-    background-image: -o-linear-gradient(top, #F2B880, #C98686);
-    background-image: linear-gradient(top, bottom, #F2B880, #C98686);
+  
+button {
+    background: black;
+    background-image: -webkit-linear-gradient(top, white, grey);
+    background-image: -moz-linear-gradient(top, white, grey);
+    background-image: -moz-linear-gradient(top, white, grey);
+    background-image: linear-gradient(top, bottom, white, grey);
     border-radius: 50%;
     border: 0;
     text-shadow: 3px #f2c15e;
@@ -61,39 +50,35 @@ body {
     background-size: center;
     margin: 16px;
   }
-  
-  /* #game-table {
-    width: 700px;
-    height: 600px;
-    margin:0 auto;
-    position:relative;
-    border: 2px solid #E7CFBC;
-    border-collapse: collapse;
-  } */
-  
-  .disc {
-    position: absolute;
-    z-index: -1;
-    top: -55px;
-    left: 14px;
-    width: 46px;
-    height: 46px;
-    border-radius: 46px;
-    transition: all .3s;
-  }
-  
-  .disc.red {
-    background:#d96666;
-  }
-  
-  .disc.yellow {
-    background:#ffeb79;
+
+td {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    padding: 21px;
   }
 
-  td {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 0;
-      padding: 21px;
+footer {
+      align-content: flex-end;
+      size: 500px;
   }
+
+  a {
+    background-color: black;
+    color:white;
+    text-decoration: none;
+    padding: 4px 6px;
+    font-family: -apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+    display: inline-block;
+    border-radius: 3px;
+  }
+
+.resetbutton {
+      border-radius: 50%;
+  }
+
+  
