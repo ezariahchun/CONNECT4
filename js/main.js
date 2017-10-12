@@ -2,9 +2,11 @@
 var gameField;
 var currentPlayer = 1;
 var winner;
+var drawMsg = 'The game is a draw.';
 
 /*-- cached DOM elements --*/
-var cells = $("td");
+var $cells = $("td");
+var $msg = $("#message");
 
 function newgame(){
   gameField = [
@@ -39,14 +41,22 @@ function render() {
   };
 
   // job of render is to transfer state vars to the dom
-  cells.each(function(index, cell) {
+  $cells.each(function(index, cell) {
     var colIdx = cell.getAttribute('col');
     var rowIdx = cell.getAttribute('row');
     console.log(gameField[colIdx][rowIdx]);
     $(cell).css('background-color', colors[gameField[colIdx][rowIdx]].toString());
   });
   // render winner/tie/whose turn
-
+  if (winner) {
+    if (winner === 'T') {
+      $msg.html('ITS A TIE!')
+    } else {
+      $msg.html(`${currentPlayer === -1 ? 'ORANGE' : 'BLACK'} WINS!`);
+    }
+  } else {
+    $msg.html(`Player ${currentPlayer === 1 ? 'ORANGE' : 'BLACK'}'S TURN`);
+  }
 }
 
 $('button').on('click',function() {
@@ -60,9 +70,7 @@ $('button').on('click',function() {
   render();
 })
 
-function winCheck () {
-  if (winner) return;
-  
+function winCheck() {
   for (var colIdx = 0; colIdx < 6; colIdx++) {
     for (var rowIdx = 0; rowIdx < 5; rowIdx++) {
       winner = chkHor(colIdx, rowIdx) || chkVer(colIdx, rowIdx) || chkDiagUp(colIdx, rowIdx) || chkDiagDown(colIdx, rowIdx);
@@ -71,8 +79,12 @@ function winCheck () {
     if (winner) return;
   }
   // check if there's a tie (no zeroes remaining)
-  
+  var hasZeroes = gameField.some(function(colArr) {
+    return colArr.includes(0);
+  });
+  winner = hasZeroes ? null : 'T'; 
 };
+
 
 function chkHor(colIdx, rowIdx) {
   if (colIdx > 3) return null;

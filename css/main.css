@@ -1,43 +1,57 @@
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Amatic SC', cursive;    
     background-image: url("./../scott-webb-146106.jpg");
     background-size: 100%;
     background-position: center;
     margin: 0 auto;
+    letter-spacing: 7px;
   }
   
 h1 {
-    text-align:center;
-    margin-bottom:5px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0px;
     color: #FCEC52;
     font-weight: bold;
     font-size: 75px;
   }
+
+  h2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 50px;
+    color: red;
+  }
   
 p.info {
-    text-align:center;
-    width:400px;
-    margin:0 auto;
+    text-align: center;
+    width: 465px;
+    margin: 0 auto;
     font-size: 16px;
-    font-weight:bold;
-    color:#FA9F42;
-    margin-bottom:0px;
+    font-weight: bold;
+    color: #FA9F42;
+    margin-bottom: 0px;
     font-weight: bold;
   }
   
 #game-base {
     width: 660px;  
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 15px;
     justify-content: center;
   }
+
+#collumnbuttons {
+    width: 689px;
+    
+}
   
 button {
     background: black;
-    background-image: -webkit-linear-gradient(top, white, grey);
-    background-image: -moz-linear-gradient(top, white, grey);
-    background-image: -moz-linear-gradient(top, white, grey);
-    background-image: linear-gradient(top, bottom, white, grey);
+    background-image: -webkit-linear-gradient(top, grey, white);
+    background-image: -moz-linear-gradient(top, grey, white);
+    background-image: -moz-linear-gradient(top, grey, white);
+    background-image: linear-gradient(top, bottom, grey, white);
     border-radius: 50%;
     border: 0;
     text-shadow: 3px #f2c15e;
@@ -52,16 +66,24 @@ button {
   }
 
 td {
+    background-image: -webkit-linear-gradient(top, grey, #D6DBB2);
+    background-image: -moz-linear-gradient(top, grey, #D6DBB2);
+    background-image: -moz-linear-gradient(top, grey, #D6DBB2);
+    background-image: linear-gradient(top, bottom, grey, #D6DBB2);
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 0;
+    border: 2px;
     padding: 21px;
   }
 
-footer {
+  table {
+      width: 692px;
+      height: 590px;
+  }
+
+  footer {
       align-content: flex-end;
-      size: 500px;
   }
 
   a {
@@ -77,7 +99,8 @@ footer {
     border-radius: 3px;
   }
 
-.resetbutton {
-      border-radius: 50%;
-  }
 
+
+  /* background-image: url("./../pumpkinicon.png");
+  background-size: 100%;
+  background-position: center; */
