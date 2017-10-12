@@ -114,6 +114,10 @@ function chkDiagDown(colIdx, rowIdx) {
   return null;
 }
 
+document.querySelector('.rbutton').addEventListener('click', function() {
+  newgame();
+  render();
+}) 
 
 newgame();
 render();

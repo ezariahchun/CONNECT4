@@ -43,26 +43,27 @@ p.info {
 
 #collumnbuttons {
     width: 689px;
+    text-align: center;
     
 }
   
-button {
+.col-selector {
     background: black;
-    background-image: -webkit-linear-gradient(top, grey, white);
-    background-image: -moz-linear-gradient(top, grey, white);
-    background-image: -moz-linear-gradient(top, grey, white);
-    background-image: linear-gradient(top, bottom, grey, white);
+    background-image: -webkit-linear-gradient(top, black, orange);
+    background-image: -moz-linear-gradient(top, black, orange);
+    background-image: -moz-linear-gradient(top, black, orange);
+    background-image: linear-gradient(top, bottom, black, orange);
     border-radius: 50%;
     border: 0;
     text-shadow: 3px #f2c15e;
-    font-family: Arial;
+    font-family: 'Amatic SC', cursive;
     color: #ffffff;
-    font-size: 32px;
+    font-size: 25px;
     padding: 10px 21px; 
     text-decoration: none;
     text-align: center;
     background-size: center;
-    margin: 16px;
+    margin: 2px 19px;
   }
 
 td {
@@ -95,6 +96,23 @@ td {
     border-radius: 3px;
   }
 
+  #resetbutton {
+      text-align: center;
+}
+
+.rbutton {
+    background: #FCEC52;
+    padding: 10px 21px;
+    font-family: 'Amatic SC', cursive;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-image: -webkit-linear-gradient(top, orange, black);
+    background-image: -moz-linear-gradient(top, orange, black);
+    background-image: -moz-linear-gradient(top, orange, black);
+    background-image: linear-gradient(top, bottom, orange, black);
+}
 
 
   /* background-image: url("./../pumpkinicon.png");
