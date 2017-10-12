@@ -20,7 +20,7 @@ function newgame(){
   ];
   currentPlayer = 1;
   winner = null;
-}
+};
 
 
 /*-- functions --*/
@@ -57,7 +57,7 @@ function render() {
   } else {
     $msg.html(`Player ${currentPlayer === 1 ? 'ORANGE' : 'BLACK'}'S TURN`);
   }
-}
+};
 
 $('button').on('click',function() {
   if (winner) return;
@@ -68,7 +68,7 @@ $('button').on('click',function() {
   currentPlayer *= -1;
   winCheck();
   render();
-})
+});
 
 function winCheck() {
   for (var colIdx = 0; colIdx < 6; colIdx++) {
@@ -91,33 +91,33 @@ function chkHor(colIdx, rowIdx) {
   var sum = Math.abs(gameField[colIdx][rowIdx] + gameField[colIdx + 1][rowIdx] + gameField[colIdx + 2][rowIdx] + gameField[colIdx + 3][rowIdx]);
   if (sum === 4) return gameField[colIdx][rowIdx];
   return null;
-}
+};
 
 function chkVer(colIdx, rowIdx) {
   if (rowIdx > 2) return null;
   var sum = Math.abs(gameField[colIdx][rowIdx] + gameField[colIdx][rowIdx + 1] + gameField[colIdx][rowIdx + 2] + gameField[colIdx][rowIdx + 3]);
   if (sum === 4) return gameField[colIdx][rowIdx];
   return null;
-}
+};
 
 function chkDiagUp(colIdx, rowIdx) {
   if (colIdx > 3 || rowIdx > 2) return null;
   var sum = Math.abs(gameField[colIdx][rowIdx] + gameField[colIdx + 1][rowIdx + 1] + gameField[colIdx + 2][rowIdx + 2] + gameField[colIdx + 3][rowIdx + 3]);
   if (sum === 4) return gameField[colIdx][rowIdx];
   return null;
-}
+};
 
 function chkDiagDown(colIdx, rowIdx) {
   if (colIdx > 3 || rowIdx < 3) return null;
   var sum = Math.abs(gameField[colIdx][rowIdx] + gameField[colIdx + 1][rowIdx - 1] + gameField[colIdx + 2][rowIdx - 2] + gameField[colIdx + 3][rowIdx - 3]);
   if (sum === 4) return gameField[colIdx][rowIdx];
   return null;
-}
+};
 
 document.querySelector('.rbutton').addEventListener('click', function() {
   newgame();
   render();
-}) 
+});
 
 newgame();
 render();
