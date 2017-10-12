@@ -1,6 +1,6 @@
 body {
     font-family: 'Quicksand', sans-serif;
-    background-image: url("file:///Users/ezariahchun/connect4/scott-webb-146106.jpg");
+    background-image: url("./scott-webb-146106.jpg");
     background-size: 100%;
     background-position: center;
     margin: 0 auto;
@@ -81,4 +81,3 @@ footer {
       border-radius: 50%;
   }
 
-  
