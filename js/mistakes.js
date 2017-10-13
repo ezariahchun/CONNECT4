@@ -1,4 +1,4 @@
-// start of drunk code
+
 function checkForVictory(row,col){
     if(getAdj(row,col,0,1)+getAdj(row,col,0,-1) > 2){
       return true;
@@ -172,4 +172,3 @@ function checkForVictory(row,col){
   function moveit(who,where){
       document.getElementById('d'+who).style.top = where+'px';
   }
-  //end of my drunk code
