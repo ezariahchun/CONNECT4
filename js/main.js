@@ -8,7 +8,7 @@ var drawMsg = 'The game is a draw.';
 var $cells = $("td");
 var $msg = $("#message");
 
-function newgame(){
+function newgame() {
   gameField = [
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
@@ -39,7 +39,7 @@ function render() {
     '-1': '#114B5F'
   };
 
-  $cells.each(function(index, cell) {
+  $cells.each(function (index, cell) {
     var colIdx = cell.getAttribute('col');
     var rowIdx = cell.getAttribute('row');
     console.log(gameField[colIdx][rowIdx]);
@@ -57,11 +57,11 @@ function render() {
   }
 };
 
-$('button').on('click',function() {
+$('button').on('click', function () {
   if (winner) return;
   var colIdx = parseInt(this.id);
   var rowIdx = gameField[colIdx].indexOf(0);
-  if(rowIdx === -1) return;
+  if (rowIdx === -1) return;
   gameField[colIdx][rowIdx] = currentPlayer;
   currentPlayer *= -1;
   winCheck();
@@ -77,10 +77,10 @@ function winCheck() {
     if (winner) return;
   }
 
-  var hasZeroes = gameField.some(function(colArr) {
+  var hasZeroes = gameField.some(function (colArr) {
     return colArr.includes(0);
   });
-  winner = hasZeroes ? null : 'T'; 
+  winner = hasZeroes ? null : 'T';
 };
 
 function chkHor(colIdx, rowIdx) {
@@ -111,7 +111,7 @@ function chkDiagDown(colIdx, rowIdx) {
   return null;
 };
 
-document.querySelector('.rbutton').addEventListener('click', function() {
+document.querySelector('.rbutton').addEventListener('click', function () {
   newgame();
   render();
 });
