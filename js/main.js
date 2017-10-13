@@ -22,7 +22,6 @@ function newgame(){
   winner = null;
 };
 
-
 /*-- functions --*/
 
 function getCol(idx) {
@@ -40,14 +39,13 @@ function render() {
     '-1': '#114B5F'
   };
 
-  // job of render is to transfer state vars to the dom
   $cells.each(function(index, cell) {
     var colIdx = cell.getAttribute('col');
     var rowIdx = cell.getAttribute('row');
     console.log(gameField[colIdx][rowIdx]);
     $(cell).css('background-color', colors[gameField[colIdx][rowIdx]].toString());
   });
-  // render winner/tie/whose turn
+
   if (winner) {
     if (winner === 'T') {
       $msg.html('ITS A TIE!')
@@ -78,13 +76,12 @@ function winCheck() {
     }
     if (winner) return;
   }
-  // check if there's a tie (no zeroes remaining)
+
   var hasZeroes = gameField.some(function(colArr) {
     return colArr.includes(0);
   });
   winner = hasZeroes ? null : 'T'; 
 };
-
 
 function chkHor(colIdx, rowIdx) {
   if (colIdx > 3) return null;
